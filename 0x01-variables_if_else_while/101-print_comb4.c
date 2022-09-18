@@ -15,7 +15,7 @@
 int main(void)
 {
 	int a, b, c, d;
-	
+
 		for (a = 0; a < 1000; a++)
 		{
 
@@ -31,7 +31,7 @@ int main(void)
 
 				if (a < 700)
 				{
-			
+
 					putchar(',');
 					putchar(' ');
 
