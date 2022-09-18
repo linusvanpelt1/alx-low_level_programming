@@ -1,42 +1,36 @@
 #include <stdio.h>
 /**
- * main - main block
- *Description: Print all possible combinations of two digits.
- *Numbers must be separated by commas and a space.
- *01 and 10 are considered as the same combination of the two digits.
- *Print only the smallest combination of two digits.
- *Numbers should be printed in ascending order, with two digits.
- *You can only use `putchar`.
- *You can only use `putchar` up to 5 times.
- *You are not allowed to use any variable of type `char`.
- *Return: 0
+ * main - print numbers from 00 to 99.
+(*
+ * Return: 0 on success
  */
 int main(void)
 {
-	int a, b, c;
+	int i = '0';
+	int j = '0';
 
-	a = 0;
-
-	while (a < 100)
+	while (i <= '9')
 	{
-		b = a % 10; /* singles digit */
-		c = a / 10; /* doubles digit */
-		
-		if (c < b)
+		while (j <= '9')
 		{
-			putchar(c + '0');
-			putchar(b + '0');
-
-			if (a < 89)
+			if (!(i > j || i == j))
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
-		}																										}
-		
-		a++;
+			j++;
+		}
+		j = '0';
+		i++;
 	}
-	putchar('\n');
-	
 	return (0);
 }
