@@ -6,8 +6,7 @@
  * Return: void
 */
 
-int main(void)
-	_puts(char *str)
+void _puts(char *str)
 {
 	int i = 0;
 
