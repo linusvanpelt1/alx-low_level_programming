@@ -1,1 +1,6 @@
-3-function_like_macro.h
+#ifndef ABSO
+#define ABSO
+
+#define ABS(X) (((X) < (0)) ? (-(X)) : (X))
+
+#endif /* ABS(X) */
